@@ -8,6 +8,10 @@
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha tests/validate-test.js",
     "coverage-ci": "npm run coverage && codecov"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinacious/express-joi-validate.git"
+  },
   "keywords": [
     "express",
     "joi",
