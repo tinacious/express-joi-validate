@@ -22,6 +22,9 @@ app.get('/contacts/:id', validate({
 }), (req, res) => res.send('ok'));
 
 
+app.get('/health', validate(), (req, res) => res.send('ok'));
+
+
 app.post('/contacts', validate({
   body: {
     firstName: Joi.string().required(),

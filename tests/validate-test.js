@@ -47,4 +47,10 @@ describe('validate() middleware', () => {
         .expect(200, 'ok', done)
     });
   });
+  
+  it('skips validation if no schema provided', (done) => {
+    request(server)
+      .get('/health')
+      .expect(200, 'ok', done)
+  });
 });

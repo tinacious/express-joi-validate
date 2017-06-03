@@ -4,7 +4,9 @@
   "description": "Simple route validation middleware for Express using Joi",
   "main": "validate.js",
   "scripts": {
-    "test": "mocha tests/validate-test.js"
+    "test": "mocha tests/validate-test.js",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha tests/validate-test.js",
+    "coverage-ci": "npm run coverage && codecov"
   },
   "keywords": [
     "express",
@@ -17,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "body-parser": "^1.17.2",
+    "codecov": "^2.2.0",
     "express": "^4.15.3",
     "mocha": "^3.4.2",
     "supertest": "^3.0.0"
