@@ -1,0 +1,27 @@
+{
+  "name": "express-joi-validate",
+  "version": "1.0.0",
+  "description": "Simple route validation middleware for Express using Joi",
+  "main": "validate.js",
+  "scripts": {
+    "test": "mocha tests/validate-test.js"
+  },
+  "keywords": [
+    "express",
+    "joi",
+    "middleware",
+    "validate",
+    "validation"
+  ],
+  "author": "Tina Holly",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "joi": "^10.5.2"
+  }
+}
