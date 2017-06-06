@@ -1,4 +1,5 @@
 const request = require('supertest');
+const assert = require('assert');
 
 
 describe('validate() middleware', () => {
@@ -37,7 +38,11 @@ describe('validate() middleware', () => {
       request(server)
         .post('/contacts')
         .send({ firstName: 'Tina' })
-        .expect(400, done)
+        .expect(400)
+        .end((err, res) => {
+          assert.equal(res.body.field, 'email');
+          done();
+        })
     });
     
     it('returns 200 for successful body validation', (done) => {

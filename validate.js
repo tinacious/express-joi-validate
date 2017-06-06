@@ -28,7 +28,8 @@ const validate = (schema) => (
     return Joi.validate(obj, schema, (err) => {
       if (err) {
         const message = `${err.details[0].message.replace(/"/g, "'")} at ${err.details[0].path}`;
-        res.status(400).json({ message }).end();
+        const field = err.details[0].context.key;
+        res.status(400).json({ message, field }).end();
         return;
       }
 
