@@ -27,6 +27,8 @@ const contactSchema = {
 app.get('/contacts/:id', validate(contactSchema), contactsHandler);
 ```
 
+For detailed usage and more examples, see the blog post [Express route param validation (Node.js)](https://tinaciousdesign.com/blog/express-route-param-validation-nodejs).
+
 ## Development
 
 ### Testing
