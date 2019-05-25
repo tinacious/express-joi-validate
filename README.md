@@ -16,6 +16,7 @@ app.get('/contacts/:id', contactsHandler);
 To implement route validation, simply call the provided validation function with the desired schema that uses Joi:
 
 ```js
+const Joi = require('@hapi/joi');
 const validate = require('express-joi-validate');
 
 const contactSchema = {
