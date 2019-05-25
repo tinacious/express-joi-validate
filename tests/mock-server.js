@@ -1,5 +1,5 @@
 const express = require('express');
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 
 const validate = require('../validate');
 
