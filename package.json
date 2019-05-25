@@ -30,6 +30,6 @@
     "supertest": "^4.0.0"
   },
   "dependencies": {
-    "joi": "^v14.3.1"
+    "@hapi/joi": "^v15.0.3"
   }
 }
