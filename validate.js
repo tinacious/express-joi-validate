@@ -25,12 +25,16 @@ const validate = (schema) => (
         }
       });
 
-    return Joi.validate(obj, schema, (err) => {
+    return Joi.validate(obj, schema, { abortEarly: false }, (err) => {
       if (err) {
-        const message = `${err.details[0].message.replace(/"/g, "'")} at ${err.details[0].path}`;
-        const field = err.details[0].context.key;
-        res.status(400).json({ message, field }).end();
-        return;
+        const errors = []
+
+        err.details.forEach(i => {
+          delete i.context.label
+          errors.push({ message: i.message, path: `'${i.path[1]}' at ${i.path[0]}`, context: i.context })
+        })
+
+        return res.status(400).json({ errors });
       }
 
       return next();

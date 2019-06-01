@@ -40,7 +40,7 @@ describe('validate() middleware', () => {
         .send({ firstName: 'Tina' })
         .expect(400)
         .end((err, res) => {
-          assert.equal(res.body.field, 'email');
+          assert.equal(res.body.errors[0].path, '\'email\' at body');
           done();
         })
     });
