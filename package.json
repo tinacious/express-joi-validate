@@ -29,6 +29,9 @@
     "mocha": "^6.0.2",
     "supertest": "^4.0.0"
   },
+  "resolutions": {
+    "handlebars": "v4.1.2"
+  },
   "dependencies": {
     "@hapi/joi": "^v15.0.3"
   }
