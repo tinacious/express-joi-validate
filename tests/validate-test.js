@@ -11,28 +11,28 @@ describe('validate() middleware', () => {
         .get('/posts')
         .expect(400, done)
     });
-    
+
     it('returns 200 for successful query validation', (done) => {
       request(server)
         .get('/posts?limit=10')
         .expect(200, 'ok', done)
     });
   });
-  
+
   describe('params validation', () => {
     it('returns 400 for failed params validation', (done) => {
       request(server)
         .get('/contacts/tina')
         .expect(400, done)
     });
-    
+
     it('returns 200 for successful params validation', (done) => {
       request(server)
         .get('/contacts/7')
         .expect(200, 'ok', done)
     });
   });
-  
+
   describe('body validation', () => {
     it('returns 400 for failed body validation', (done) => {
       request(server)
@@ -40,11 +40,11 @@ describe('validate() middleware', () => {
         .send({ firstName: 'Tina' })
         .expect(400)
         .end((err, res) => {
-          assert.equal(res.body.field, 'email');
+          assert.equal(res.body.field, 'body.email');
           done();
         })
     });
-    
+
     it('returns 200 for successful body validation', (done) => {
       request(server)
         .post('/contacts')
@@ -52,7 +52,7 @@ describe('validate() middleware', () => {
         .expect(200, 'ok', done)
     });
   });
-  
+
   it('skips validation if no schema provided', (done) => {
     request(server)
       .get('/health')

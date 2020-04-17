@@ -1,6 +1,6 @@
 {
   "name": "express-joi-validate",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Simple route validation middleware for Express using Joi",
   "main": "validate.js",
   "scripts": {
@@ -33,6 +33,6 @@
     "handlebars": "v4.1.2"
   },
   "dependencies": {
-    "@hapi/joi": "^v15.0.3"
+    "@hapi/joi": "^v17.1.1"
   }
 }

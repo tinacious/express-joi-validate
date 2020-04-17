@@ -25,16 +25,17 @@ const validate = (schema) => (
         }
       });
 
-    return Joi.validate(obj, schema, (err) => {
-      if (err) {
-        const message = `${err.details[0].message.replace(/"/g, "'")} at ${err.details[0].path}`;
-        const field = err.details[0].context.key;
-        res.status(400).json({ message, field }).end();
-        return;
-      }
+    const joiSchema = Joi.object(schema);
+    const { error } = joiSchema.validate(obj);
 
-      return next();
-    });
+    if (error) {
+      const field = error.details[0].path.join('.');
+      const message = error.details[0].message.replace(/"/g, "'");
+
+      return res.status(400).json({ message, field }).end();
+    }
+
+    return next();
   }
 );
 
