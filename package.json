@@ -33,6 +33,6 @@
     "handlebars": "v4.1.2"
   },
   "dependencies": {
-    "@hapi/joi": "^v15.0.3"
+    "@hapi/joi": "^v17.1.1"
   }
 }
