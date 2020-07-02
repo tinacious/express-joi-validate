@@ -457,8 +457,8 @@
         "affectsGlobalScope": false
       },
       "../validate.ts": {
-        "version": "1fa11bb58a8cc77f0e0b669fcc965bc4d235354c37c18bd5e36d50140aeab842",
-        "signature": "14b459568dd23eba545a2d492ddd4fa0a7818cee9689c3084b33816a1d28099b",
+        "version": "e574158b3a78b22fdf57d00262520c07fcf1e3f6d8075276831a73bbc76184af",
+        "signature": "e89f2133d08cc04210d873f2d104e460dbe91fc07fae1fcdcb8c42edd00ba7c6",
         "affectsGlobalScope": false
       }
     },
@@ -1805,6 +1805,10 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
+      ],
+      "../validate.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/hapi__joi/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [

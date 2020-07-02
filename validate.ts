@@ -55,3 +55,5 @@ const validate: ExpressJoiValidate = (schema) => (req, res, next) => {
 // lolz required...
 // https://stackoverflow.com/questions/12696236/module-exports-in-typescript
 module.exports = validate;
+
+export default validate
