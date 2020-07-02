@@ -1,7 +1,7 @@
 const express = require('express');
 const Joi = require('@hapi/joi');
 
-const validate = require('../validate');
+const validate = require('../lib/validate');
 
 const app = express();
 
