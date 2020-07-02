@@ -1,10 +1,12 @@
 {
   "name": "express-joi-validate",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Simple route validation middleware for Express using Joi",
-  "main": "validate.js",
+  "main": "./lib/validate.js",
+  "types": "./lib/validate.d.ts",
   "scripts": {
     "test": "mocha tests/validate-test.js",
+    "tsc": "tsc",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha tests/validate-test.js",
     "coverage-ci": "npm run coverage && codecov"
   },
@@ -22,12 +24,16 @@
   "author": "Tina Holly",
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/hapi__joi": "^17.1.3",
     "body-parser": "^1.18.3",
     "codecov": "^3.1.0",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "istanbul": "^0.4.5",
     "mocha": "^6.0.2",
-    "supertest": "^4.0.0"
+    "supertest": "^4.0.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.6"
   },
   "resolutions": {
     "handlebars": "v4.1.2"

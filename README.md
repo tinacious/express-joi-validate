@@ -39,3 +39,11 @@ Test the 3 different types of validations using the tests and mock server:
 ```
 npm test
 ```
+
+### TypeScript
+
+Generate TypeScript definitions:
+
+```
+npm run tsc
+```
