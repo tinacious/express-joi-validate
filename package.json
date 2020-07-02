@@ -1,6 +1,6 @@
 {
   "name": "express-joi-validate",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Simple route validation middleware for Express using Joi",
   "main": "./lib/validate.js",
   "types": "./lib/validate.d.ts",
