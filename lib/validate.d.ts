@@ -1,10 +1,10 @@
 /// <reference types="hapi__joi" />
 import { Handler } from 'express';
-import { Schema } from '@hapi/joi';
+import { SchemaMap } from '@hapi/joi';
 interface Options {
-    params?: Schema;
-    body?: Schema;
-    query?: Schema;
+    params?: SchemaMap;
+    body?: SchemaMap;
+    query?: SchemaMap;
 }
 interface ExpressJoiValidate {
     (schemaOptions: Options): Handler;

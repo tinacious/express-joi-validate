@@ -1,13 +1,13 @@
 import { Handler } from 'express';
-import { Schema } from '@hapi/joi'
+import { SchemaMap } from '@hapi/joi'
 const Joi = require('@hapi/joi');
 
 type SuppertedKeys = 'params' | 'body' | 'query'
 
 interface Options {
-  params?: Schema
-  body?: Schema
-  query?: Schema
+  params?: SchemaMap
+  body?: SchemaMap
+  query?: SchemaMap
 }
 
 interface ExpressJoiValidate {
