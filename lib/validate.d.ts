@@ -16,7 +16,7 @@ interface ExpressJoiValidate {
  *  - body
  *  - query
  * Validates the request properties specified in the schema
- * @param {Object} schema { params, body, query }
+ * @param schema
  */
 declare const validate: ExpressJoiValidate;
 export default validate;
