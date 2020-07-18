@@ -1,8 +1,7 @@
 import { Handler } from 'express';
-import { SchemaMap } from '@hapi/joi'
-const Joi = require('@hapi/joi');
+import Joi, { SchemaMap } from '@hapi/joi'
 
-type SuppertedKeys = 'params' | 'body' | 'query'
+type SupportedKeys = 'params' | 'body' | 'query'
 
 interface Options {
   params?: SchemaMap
@@ -21,7 +20,7 @@ interface ExpressJoiValidate {
  *  - body
  *  - query
  * Validates the request properties specified in the schema
- * @param {Object} schema { params, body, query }
+ * @param schema
  */
 const validate: ExpressJoiValidate = (schema) => (req, res, next) => {
   if (!schema) {
@@ -32,7 +31,7 @@ const validate: ExpressJoiValidate = (schema) => (req, res, next) => {
 
   ['params', 'body', 'query']
     .forEach((key) => {
-      const k: SuppertedKeys = key as SuppertedKeys
+      const k: SupportedKeys = key as SupportedKeys;
 
       if (schema[k]) {
         obj[k] = req[k];
