@@ -30,7 +30,7 @@
     "codecov": "^3.1.0",
     "express": "^4.17.1",
     "istanbul": "^0.4.5",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "supertest": "^4.0.0",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.6"
